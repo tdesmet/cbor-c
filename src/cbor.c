@@ -345,7 +345,7 @@ unsigned char *cbor_write_type_long_size(unsigned char *data, unsigned int size,
         *data++     = (unsigned char) (type | 24);
         *data++ = (unsigned char) type_size;
 
-        return data + 2;
+        return data;
     } else if(type_size < 65536ULL) {
         if(size < 3) {
             return data;
